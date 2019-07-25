@@ -1,4 +1,4 @@
-import React from "react"
+// import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
@@ -47,7 +47,9 @@ const LinkItem = ({ title, href, tags }) => (
     {tags ? (
       <div sx={{ fontSize: 16 }}>
         {tags.map(t => (
-          <span sx={{ marginRight: 2 }}>{t}</span>
+          <span key={t} sx={{ marginRight: 2 }}>
+            {t}
+          </span>
         ))}
       </div>
     ) : null}
