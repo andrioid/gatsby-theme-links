@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "gatsby": "^2.13.1",
+    "gatsby-source-github-api": "^0.1.0",
+    "gatsby-source-pinboard": "^0.1.7",
     "gatsby-theme-jam-example": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

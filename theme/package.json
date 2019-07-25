@@ -1,15 +1,17 @@
 {
-  "name": "gatsby-theme-jam-example",
-  "author": "Jason Lengstorf <jason@gatsbyjs.com>",
+  "name": "gatsby-theme-links",
+  "author": "Andri Óskarsson <andri80@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jlengstorf/gatsby-theme-jam-example.git"
+    "url": "https://github.com/andrioid/gatsby-theme-links"
   },
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
     "gatsby": "^2.13.1",
+    "gatsby-source-github-api": "^0.1.0",
+    "gatsby-source-pinboard": "^0.1.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

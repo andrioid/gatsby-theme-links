@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"101@^1.0.0", "101@^1.5.0":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/101/-/101-1.6.3.tgz#9071196e60c47e4ce327075cf49c0ad79bd822fd"
+  integrity sha512-4dmQ45yY0Dx24Qxp+zAsNLlMF6tteCyfVzgbulvSyC7tCyd3V8sW76sS0tHq8NpcbXfWTKasfyfzU1Kd86oKzw==
+  dependencies:
+    clone "^1.0.2"
+    deep-eql "^0.1.3"
+    keypather "^1.10.2"
+
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -2336,6 +2345,11 @@ clone-response@1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+clone@^1.0.2:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
+  integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -3000,6 +3014,13 @@ decompress-response@^3.3.0:
   integrity sha1-gKTdMjdIOEv6JICDYirt7Jgq3/M=
   dependencies:
     mimic-response "^1.0.0"
+
+deep-eql@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-0.1.3.tgz#ef558acab8de25206cd713906d74e56930eb69f2"
+  integrity sha1-71WKyrjeJSBs1xOQbXTlaTDrafI=
+  dependencies:
+    type-detect "0.1.1"
 
 deep-equal@^1.0.1:
   version "1.0.1"
@@ -4305,6 +4326,21 @@ gatsby-react-router-scroll@^2.1.1:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
+gatsby-source-github-api@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-github-api/-/gatsby-source-github-api-0.1.0.tgz#3a6b38c884ea133357569061b7ab856cf980bedd"
+  integrity sha512-/S0tNsv4K7bz7gH+0RIxzTMeVmYkTDCNmkvoEpENHhXIKrmuJj1q98CfLTq8z1SbCvhcBpC7fKM6ttNaETRryg==
+  dependencies:
+    graphql-fetch "^1.0.1"
+    uuid "^3.1.0"
+
+gatsby-source-pinboard@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-source-pinboard/-/gatsby-source-pinboard-0.1.7.tgz#1cd31b1d89be1ed28ed740d1976c4c9caf4d22ec"
+  integrity sha512-gF+1A80TjKkZhpfc5m4VJkAFf2BgpAZ/kkWOEhhgWLE47I91Kz6tfwMUxeQvXx2HE4CtY6fU3Nj57VQCs9GrtQ==
+  dependencies:
+    node-fetch "^2.2.0"
+
 gatsby-telemetry@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.2.tgz#14c63c3035abacc27018966337e4e3bb07787acb"
@@ -4326,6 +4362,16 @@ gatsby-telemetry@^1.1.2:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.3.2"
+
+gatsby-theme-jam-example@*:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-jam-example/-/gatsby-theme-jam-example-1.0.0.tgz#0b318d7d2feb5f8cc189732b878349a1099859ab"
+  integrity sha512-WHlqaF3ewzNIWZgrpbUy2nU6SoHPsoYM5N8N1C2P0MhhjZlV32mzrXOnMxI6We1PltfgzQGdzwh9XWvtp1Ow8Q==
+  dependencies:
+    "@emotion/core" "^10.0.14"
+    "@mdx-js/react" "^1.0.21"
+    gatsby-plugin-theme-ui "^0.2.2"
+    theme-ui "^0.2.2"
 
 gatsby@^2.13.1:
   version "2.13.1"
@@ -4640,6 +4686,14 @@ graphql-config@^2.0.1:
     js-yaml "^3.10.0"
     lodash "^4.17.4"
     minimatch "^3.0.4"
+
+graphql-fetch@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/graphql-fetch/-/graphql-fetch-1.0.1.tgz#145112b27c603f06387a41ca4db58dd1edcaad9e"
+  integrity sha1-FFESsnxgPwY4ekHKTbWN0e3KrZ4=
+  dependencies:
+    "101" "^1.5.0"
+    isomorphic-fetch "^2.2.1"
 
 graphql-import@^0.7.1:
   version "0.7.1"
@@ -5595,7 +5649,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
@@ -5724,6 +5778,13 @@ jsx-ast-utils@^2.1.0, jsx-ast-utils@^2.2.1:
   dependencies:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
+
+keypather@^1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/keypather/-/keypather-1.10.2.tgz#e0449632d4b3e516f21cc014ce7c5644fddce614"
+  integrity sha1-4ESWMtSz5RbyHMAUznxWRP3c5hQ=
+  dependencies:
+    "101" "^1.0.0"
 
 keyv@3.0.0:
   version "3.0.0"
@@ -6406,7 +6467,7 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-fetch@^2.6.0:
+node-fetch@^2.2.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
@@ -9104,6 +9165,11 @@ type-check@~0.3.2:
   integrity sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
   dependencies:
     prelude-ls "~1.1.2"
+
+type-detect@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-0.1.1.tgz#0ba5ec2a885640e470ea4e8505971900dac58822"
+  integrity sha1-C6XsKohWQORw6k6FBZcZANrFiCI=
 
 type-fest@^0.3.0:
   version "0.3.1"

@@ -53,6 +53,9 @@ export default {
       paddingBottom: 3,
       paddingTop: 3,
     },
+    LinkItem: {
+      padding: 10,
+    },
     h1: {
       color: "text",
       fontSize: 5,

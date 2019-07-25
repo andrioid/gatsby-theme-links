@@ -1,4 +1,7 @@
 {
+  "name": "gatsby-theme-pinboard",
+  "author": "Andri Óskarsson <andri80@gmail.com>",
+  "url": "https://github.com/andrioid/gatsby-theme-pinboard",
   "private": true,
   "workspaces": [
     "theme",
