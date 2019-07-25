@@ -11,7 +11,7 @@ const LinkFormatter = ({ children }) => {
   // Keeping Pinboards data model, adapting Github output
   // Maybe move this into a custom resolver at some point
   const gh = data.allGithubData.nodes[0] || []
-  const pbItems = data.allPinboardBookmark.nodes || []
+  const pb = data.allPinboardBookmark.nodes || []
 
   const edges = gh.data.viewer.starredRepositories.edges
   const ghItems = edges.map(e => {
@@ -19,11 +19,17 @@ const LinkFormatter = ({ children }) => {
       id: e.node.id,
       href: e.node.url,
       description: e.node.nameWithOwner,
-      tags: e.node.languages.edges
-        .map(l => l.node.name)
-        .join(" ")
-        .toLowerCase(),
+      tags: e.node.languages.edges.map(l => l.node.name.toLowerCase()),
       time: e.starredAt,
+    }
+  })
+
+  const pbItems = pb.map(e => {
+    return {
+      id: e.id,
+      href: e.href,
+      description: e.description,
+      tags: e.tags && e.tags.length > 0 && e.tags.split(" "),
     }
   })
 
@@ -38,7 +44,13 @@ const LinkItem = ({ title, href, tags }) => (
     <a sx={{}} href={href} target="_blank" rel="noopener noreferrer">
       {title}
     </a>
-    {tags ? <div sx={{ fontSize: 16 }}>{tags}</div> : null}
+    {tags ? (
+      <div sx={{ fontSize: 16 }}>
+        {tags.map(t => (
+          <span sx={{ marginRight: 2 }}>{t}</span>
+        ))}
+      </div>
+    ) : null}
   </li>
 )
 
