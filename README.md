@@ -1,5 +1,8 @@
 # Gatsby Theme Link Site
 
+- [Demo README](demo/README.md)
+- [Theme Package README](theme/README.md)
+
 ## How to use the demo
 
 Add a `.env` file to the root directory of the project.
@@ -12,9 +15,13 @@ GATSBY_PINBOARD_TOKEN=yourtoken
 Then run the site. Never add your tokens to Git.
 
 ```sh
-source .env && yarn workspace demo develop
+export $(cat .env | xargs) && yarn workspace demo develop
 
 ```
+
+### More
+
+See
 
 # Gatsby Theme Jam Submission Example
 

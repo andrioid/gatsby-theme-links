@@ -1,6 +1,6 @@
 exports.createPages = ({ actions, reporter }) => {
   actions.createPage({
-    path: "/",
+    path: "/links",
     component: require.resolve("./src/templates/links.js"),
   })
 }
