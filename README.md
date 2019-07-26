@@ -3,85 +3,20 @@
 - [Demo README](demo/README.md)
 - [Theme Package README](theme/README.md)
 
-## How to use the demo
+## Introduction
 
-Add a `.env` file to the root directory of the project.
+This theme adds a '/links' page to your site that shows your 100 most recent bookmarks or stars on Github.
 
-```
-GATSBY_GITHUB_TOKEN=yourtoken
-GATSBY_PINBOARD_TOKEN=yourtoken
-```
+You need a Pinboard auth-token or a Github personal token to make this work.
 
-Then run the site. Never add your tokens to Git.
+## Motivation
 
-```sh
-export $(cat .env | xargs) && yarn workspace demo develop
+Before the times of Reddit and Hacker News it was quite common for homepages to have link sections.
 
-```
+I miss those times, but I realisticially am not going to update one. But I do bookmark things and I do star things on Github.
 
-### More
+## Screenshot
 
-See
+![gatsby-theme-links screenshot](screenshot.png)
 
-# Gatsby Theme Jam Submission Example
-
-This repo is an example and potential starting point for theme creators.
-
-It includes:
-
-- a bare-bones theme (located in `theme/`) that includes basic setup
-- a demo site (located in `demo/`) that installs the theme
-- a Yarn workspaces configuration so the theme and demo can be worked on simultaneously
-
-## How to use this repo
-
-**NOTE:** Make sure to replace `USERNAME` with your GitHub username and `THEMENAME` with your theme name.
-
-1.  Fork this repo.
-
-2.  Rename the forked repo `gatsby-theme-THEMENAME`. (Make sure to replace `THEMENAME` with your chosen name.)
-
-3.  Get the theme set up locally.
-
-    ```sh
-    # clone the repo
-    git clone git@github.com:USERNAME/gatsby-theme-THEMENAME.git
-
-    # move into the directory
-    cd gatsby-theme-THEMENAME
-
-    # install dependencies
-    yarn
-    ```
-
-4.  Update `theme/package.json` with your info.
-
-    ```diff
-      {
-    +   "name": "gatsby-theme-THEMENAME",
-    +   "author": "Your Name <name@example.com>",
-        "repository": {
-          "type": "git",
-    +     "url": "https://github.com/USERNAME/gatsby-theme-THEMENAME.git"
-        },
-    ```
-
-5.  Start the demo site.
-
-    ```sh
-    yarn workspace demo develop
-    ```
-
-    The demo will start at http://localhost:8000
-
-    **NOTE:** If you’re new to Yarn workspaces, check out [this post](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for details.
-
-6.  Start editing the theme! The demo site is configured to use the local theme, so any changes you make to the local `theme` directory will be reflected on the demo site for easy local development.
-
-7.  Follow the [submission checklist](./theme/README.md#submission-checklist) to make sure your theme qualifies to win!
-
-8.  [Submit your theme](https://themejam.gatsbyjs.org/submit) to win!
-
-## More information
-
-For contest rules and more information, see [the Theme Jam website](https://themejam.gatsbyjs.org).
+This is my submission to the [Gatsby Theme Jam](https://themejam.gatsbyjs.org/).

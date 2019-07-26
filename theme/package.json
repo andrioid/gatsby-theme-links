@@ -27,6 +27,7 @@
     "theme-ui": "^0.2.2"
   },
   "keywords": [
+    "links",
     "gatsby",
     "gatsby-theme",
     "gatsby-plugin"
