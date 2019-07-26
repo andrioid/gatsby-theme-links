@@ -30,6 +30,7 @@ const LinkFormatter = ({ children }) => {
       href: e.href,
       description: e.description,
       tags: e.tags && e.tags.length > 0 && e.tags.split(" "),
+      time: e.time,
     }
   })
 
@@ -39,21 +40,28 @@ const LinkFormatter = ({ children }) => {
   return children(combined.slice(0, 100))
 }
 
-const LinkItem = ({ title, href, tags }) => (
-  <li sx={{ marginBottom: 2 }}>
+const LinkItem = ({ title, href, tags, time }) => (
+  <Styled.li sx={{ marginBottom: 2 }}>
     <a sx={{}} href={href} target="_blank" rel="noopener noreferrer">
       {title}
     </a>
+    <div sx={{ fontSize: 16, color: "#aaa" }}>
+      <span sx={{ marginRight: 2 }}>{new Date(time).toLocaleDateString()}</span>
+    </div>
+
     {tags ? (
-      <div sx={{ fontSize: 16 }}>
-        {tags.map(t => (
-          <span key={t} sx={{ marginRight: 2 }}>
-            {t}
-          </span>
-        ))}
+      <div sx={{ fontSize: 16, color: "#aaa" }}>
+        <div>
+          tags:&nbsp;
+          {tags.map(t => (
+            <span key={t} sx={{ marginRight: 2 }}>
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     ) : null}
-  </li>
+  </Styled.li>
 )
 
 const LinksTemplate = () => {
@@ -69,6 +77,7 @@ const LinksTemplate = () => {
                     title={n.description}
                     href={n.href}
                     tags={n.tags}
+                    time={n.time}
                     key={n.id}
                   />
                 ))
