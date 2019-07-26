@@ -9,7 +9,7 @@ const token = process.env.GATSBY_GITHUB_TOKEN
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-links",
+      resolve: "@andrioid/gatsby-theme-links",
       options: {
         github: {
           token: process.env.GATSBY_GITHUB_TOKEN,
