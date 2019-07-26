@@ -1,59 +1,57 @@
 # Link Site Theme for Gatsby
 
-Before the times of Reddit and Hacker News it was quite common for homepages to have link sections.
+## Introduction
 
-I miss those times, but I realisticially am not going to update one. But I do bookmark things and I do star things on Github.
+## Demo
 
-So this gatsby-theme adds a "/links" page to your site and fetches data from Pinboard and/or Github.
+## Requirements
 
-# Gatsby Theme Jam Example Submission
+## Configuration
 
-This is a bare-bones Gatsby theme to showcase how a [Theme Jam](https://themejam.gatsbyjs.org) submission should look.
+In your gatsby project, add the following to your `gatsby-config.js`.
 
-See the [live demo](https://gatsby-theme-jam-example.netlify.com)
+I recommend using env-vars to pass tokens to your application. Never commit tokens to Git.
 
-## Installation
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: "gatsby-theme-links",
+      options: {
+        github: {
+          token: process.env.GATSBY_GITHUB_TOKEN,
+        },
+        pinboard: {
+          authToken: process.env.GATSBY_PINBOARD_TOKEN,
+        },
+      },
+    },
+  ],
+}
+```
 
-To use this theme in your Gatsby sites, follow these instructions:
+### For development
 
-1.  Install the theme
+Add a `.env` file to the root directory of the project.
 
-    ```sh
-    npm install --save gatsby-theme-jam-example
-    ```
+```
+GATSBY_GITHUB_TOKEN=yourtoken
+GATSBY_PINBOARD_TOKEN=yourtoken
+```
 
-2.  Add the theme to your `gatsby-config.js`:
+Then you can run your site with:
 
-    ```js
-    module.exports = {
-      plugins: ["gatsby-theme-jam-example"],
-    }
-    ```
+```sh
+export $(cat .env | xargs) && yarn workspace demo develop
 
-3.  Start your site
-    ```sh
-    gatsby develop
-    ```
+```
 
-## Submission Checklist
+### When deploying
 
-To ensure your Theme Jam submission [follows the rules](https://themejam.gatsbyjs.org/rules), use this checklist:
+Remember to add the tokens as environmental variables to whatever deploys your site.
 
-- [ ] Use our [accessibility guide][a11y] to ensure your site meets our accessibility standards
-- [ ] Run a performance audit using [Lighthouse][] and/or [WebPageTest][]
-- [ ] Set up a live demo using [Netlify][] or [GitHub Pages][]
-- [ ] Add installation documentation to the README
-- [ ] Update the `name` field in `package.json`
-- [ ] Update the `author` field in `package.json`
-- [ ] Update the `repository` field in `package.json`
-- [ ] Make sure the theme’s `keywords` in `package.json` include `gatsby`, `gatsby-theme`, and `gatsby-plugin`
-- [ ] Publish your theme to npm ([docs][npmpublish])
-- [ ] Submit your theme at https://themejam.gatsbyjs.org
+On Netlify, it's under "advanced" when setting up the project.
 
-[a11y]: https://gatsbyjs.org/docs/making-your-site-accessible#how-to-improve-accessibility
-[lighthouse]: https://developers.google.com/web/tools/lighthouse/
-[axe]: https://www.deque.com/axe/
-[webpagetest]: http://webpagetest.org/
-[netlify]: https://netlify.com
-[github pages]: https://pages.github.com/
-[npmpublish]: https://docs.npmjs.com/cli/publish
+## I don't like ENV vars
+
+At your own risk, you can replace `process.env.GATSBY_GITHUB_TOKEN` and `process.env.GATSBY_PINBOARD_TOKEN` with your own values.
