@@ -1,10 +1,23 @@
 # Link Site Theme for Gatsby
 
-## Introduction
+## Features
+
+- Adds a `/links` page to your site
+- Imports stars from Github
+- Imports bookmarks from Pinboard
+- Sorts by date and shows the latest 100 entries
 
 ## Demo
 
+[Live demo](https://gatsby-theme-links.netlify.com/links)
+
 ## Requirements
+
+Add the theme requirements to your site
+
+```sh
+yarn add gatsby-theme-links gatsby-plugin-pinboard gatsby-plugin-github-api
+```
 
 ## Configuration
 
